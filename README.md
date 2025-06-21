@@ -2,7 +2,7 @@
 
 Welcome to my personal developer portfolio — built with **HTML**, **CSS**, and fully hosted on **GitHub Pages**. This site showcases my skills, professional experience, and technical projects across AI, backend automation, full-stack development, and virtual assistance.
 
-> 🔗 Live Site: [https://markestella.github.io](https://markestella.github.io)
+> 🔗 Live Site: [https://markestella.github.io/portfolio](https://markestella.github.io/portfolio)
 
 ---
 
