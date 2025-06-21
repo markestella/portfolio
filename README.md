@@ -1,2 +1,36 @@
-# portfolio
-This is my interactive and responsive personal portfolio built with HTML and CSS, hosted on GitHub Pages. It showcases my technical skills, projects, and professional experience in software engineering, AI chatbot development, backend automation, and modern UI design.  Visit live site → https://markestella.github.io
+# Mark Estella | Software Engineer Portfolio
+
+Welcome to my personal developer portfolio — built with **HTML**, **CSS**, and fully hosted on **GitHub Pages**. This site showcases my skills, professional experience, and technical projects across AI, backend automation, full-stack development, and virtual assistance.
+
+> 🔗 Live Site: [https://markestella.github.io](https://markestella.github.io)
+
+---
+
+## 🚀 Overview
+
+This portfolio serves as a digital profile for hiring managers and collaborators. It includes:
+
+- A detailed **About Me** section
+- **Career Objective** and **Professional Summary**
+- Categorized **Technical Skills**
+- Full **Work Experience Timeline**
+- **Certifications & Seminars**
+- **Contact Information**
+
+---
+
+## 🛠️ Technologies Used
+
+- **HTML5** — semantic layout and accessibility
+- **CSS3** — responsive styling using grid and flexbox
+- **Google Fonts (Inter)** — for professional typography
+- **Git & GitHub Pages** — for version control and deployment
+
+---
+
+## ✨ Features
+
+- 📱 Responsive design across desktop, tablet, and mobile
+- 🧠 Highlights AI integration experience (Microsoft Semantic Kernel, OpenAI, Amazon Q)
+- 💼 Real-world experience in backend APIs, VBA, telecom, and biomedical tech
+- 🔗 External links to email and GitHub profile

@@ -1,0 +1,33 @@
+# Ignore Mac system files
+.DS_Store
+
+# Ignore node_modules if you ever add npm tooling
+node_modules/
+
+# Ignore environment files (in case you expand later)
+.env
+.env.local
+.env.development
+.env.production
+
+# Ignore build artifacts
+dist/
+build/
+
+# Ignore temporary or backup files
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.zip
+*.tar.gz
+
+# Ignore IDE/editor settings
+.vscode/
+.idea/
+*.code-workspace
+
+# Ignore OS-specific files
+Thumbs.db
+Desktop.ini
