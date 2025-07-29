@@ -1,173 +1,575 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Mark Estella - Software Engineer Portfolio"
-    />
-    <title>Mark Estella | Software Engineer Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header>
-      <h1>Mark Estella</h1>
-      <p>Software Engineer | AI Integration | Virtual Assistant</p>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mark Estella - Software Engineer">
+  <title>Mark Estella | Software Engineer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <h1>Mark Estella</h1>
+        <p>Software Engineer | AI Integration</p>
+      </div>
       <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <ul>
+          <li><a href="#about" class="active">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Templates</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section id="about">
+  <section id="about">
+    <div class="container">
+      <div class="section-header about-header animate-on-scroll">
         <h2>About Me</h2>
-        <p>
-          Versatile and solutions-driven Software Engineer with a strong
-          foundation in automation, backend development, and full-stack
-          application delivery. Progressively evolved from hands-on experience
-          in VBA scripting, Python APIs, and Docker-based microservices to
-          leading modern web and mobile app development using React, TypeScript,
-          Next.js, and cloud services like AWS. Skilled in building efficient
-          internal tools, customer-facing platforms, and AI-integrated solutions
-          using Microsoft Semantic Kernel, OpenAI, and Amazon Connect.
-          <br /><br />
-          Known for rapid learning, adaptability, and effective cross-functional
-          collaboration, with prior experience in telecom data validation,
-          biomedical systems, and virtual assistance. Demonstrates strong
-          technical ownership, clean coding practices, and a passion for solving
-          business problems through technology.
-        </p>
-      </section>
+        <p>Versatile software engineer specializing in automation, backend development, and full-stack application
+          delivery</p>
+      </div>
+      <div class="about-content">
+        <div class="about-text animate-on-scroll">
+          <h3>Professional Profile</h3>
+          <p>Versatile and solutions-driven Software Engineer with a strong foundation in automation, backend
+            development, and full-stack application delivery. Progressively evolved from hands-on experience in VBA
+            scripting, Python APIs, and Docker-based microservices to leading modern web and mobile app development
+            using React, TypeScript, Next.js, and cloud services like AWS.</p>
+          <p>Skilled in building efficient internal tools, customer-facing platforms, and AI-integrated solutions using
+            Microsoft Semantic Kernel, OpenAI, and Amazon Connect.</p>
+          <p>Known for rapid learning, adaptability, and effective cross-functional collaboration, with prior experience
+            in telecom data validation, biomedical systems, and virtual assistance. Demonstrates strong technical
+            ownership, clean coding practices, and a passion for solving business problems through technology.</p>
 
-      <section id="objective">
-        <h2>Career Objective</h2>
-        <p>
-          To obtain a position where I can combine my technical expertise and
-          adaptability as a Virtual Assistant with a software engineering
-          background, contributing to automation, application development, and
-          intelligent system design. I aim to support innovative teams by
-          delivering efficient digital solutions, optimizing workflows, and
-          continuously expanding my knowledge across AI, cloud services, and
-          full-stack development.
-        </p>
-      </section>
+          <h3 style="margin-top: 2rem;">Career Objective</h3>
+          <p>To obtain a position where I can combine my technical expertise and adaptability as a Virtual Assistant
+            with a software engineering background, contributing to automation, application development, and intelligent
+            system design. I aim to support innovative teams by delivering efficient digital solutions, optimizing
+            workflows, and continuously expanding my knowledge across AI, cloud services, and full-stack development.
+          </p>
+        </div>
+        <div class="about-image animate-on-scroll">
+          <img src="assets/me.jpg" alt="My photo" class="profile-img">
+          <div class="initials">ME</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <section id="skills">
+  <section id="skills" style="background-color: #f3f4f6;">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
         <h2>Technical Skills</h2>
-        <div class="grid">
-          <div>
-            <strong>Languages:</strong> Python, VBA, C#, TypeScript, JavaScript,
-            C++, YAML
-          </div>
-          <div>
-            <strong>Frontend:</strong> React, Next.js, Tailwind CSS, ShadCN UI,
-            HTML/CSS
-          </div>
-          <div><strong>Backend:</strong> FastAPI, .NET, Google Apps Script</div>
-          <div><strong>Databases:</strong> PostgreSQL, Vector DB, EF Core</div>
-          <div><strong>DevOps:</strong> Docker, Git, GitLab CI/CD, YAML</div>
-          <div>
-            <strong>AI Tools:</strong> Microsoft Semantic Kernel, OpenAI,
-            Mistral, Assembly AI
-          </div>
-          <div>
-            <strong>AWS:</strong> Lambda, Connect, Q, Bedrock, S3, DynamoDB
-          </div>
-          <div>
-            <strong>Other:</strong> Arduino, Canva, CapCut, Filmora, Photoshop,
-            NEMO Drive Test, Microsoft Office
+        <p>Comprehensive expertise across multiple technologies and platforms</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category animate-on-scroll">
+          <h3><i class="fas fa-code"></i> Languages</h3>
+          <ul class="skill-list">
+            <li>Python <span class="skill-level">Advanced</span></li>
+            <li>VBA <span class="skill-level">Advanced</span></li>
+            <li>C# <span class="skill-level">Intermediate</span></li>
+            <li>TypeScript <span class="skill-level">Advanced</span></li>
+            <li>JavaScript <span class="skill-level">Advanced</span></li>
+            <li>C++ <span class="skill-level">Intermediate</span></li>
+            <li>YAML <span class="skill-level">Advanced</span></li>
+          </ul>
+        </div>
+
+        <div class="skill-category animate-on-scroll">
+          <h3><i class="fas fa-laptop"></i> Frontend</h3>
+          <ul class="skill-list">
+            <li>React <span class="skill-level">Advanced</span></li>
+            <li>Next.js <span class="skill-level">Advanced</span></li>
+            <li>Tailwind CSS <span class="skill-level">Advanced</span></li>
+            <li>ShadCN UI <span class="skill-level">Intermediate</span></li>
+            <li>HTML/CSS <span class="skill-level">Expert</span></li>
+          </ul>
+        </div>
+
+        <div class="skill-category animate-on-scroll">
+          <h3><i class="fas fa-server"></i> Backend & Databases</h3>
+          <ul class="skill-list">
+            <li>FastAPI <span class="skill-level">Advanced</span></li>
+            <li>.NET <span class="skill-level">Intermediate</span></li>
+            <li>Google Apps Script <span class="skill-level">Advanced</span></li>
+            <li>PostgreSQL <span class="skill-level">Advanced</span></li>
+            <li>Vector DB <span class="skill-level">Intermediate</span></li>
+            <li>EF Core <span class="skill-level">Intermediate</span></li>
+          </ul>
+        </div>
+
+        <div class="skill-category animate-on-scroll">
+          <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
+          <ul class="skill-list">
+            <li>Docker <span class="skill-level">Advanced</span></li>
+            <li>Git <span class="skill-level">Advanced</span></li>
+            <li>GitLab CI/CD <span class="skill-level">Intermediate</span></li>
+            <li>AWS Lambda <span class="skill-level">Intermediate</span></li>
+            <li>AWS Connect <span class="skill-level">Intermediate</span></li>
+            <li>AWS S3/DynamoDB <span class="skill-level">Intermediate</span></li>
+          </ul>
+        </div>
+
+        <div class="skill-category animate-on-scroll">
+          <h3><i class="fas fa-robot"></i> AI Tools</h3>
+          <ul class="skill-list">
+            <li>Microsoft Semantic Kernel <span class="skill-level">Advanced</span></li>
+            <li>OpenAI <span class="skill-level">Advanced</span></li>
+            <li>Mistral <span class="skill-level">Intermediate</span></li>
+            <li>Assembly AI <span class="skill-level">Intermediate</span></li>
+            <li>AWS Q/Bedrock <span class="skill-level">Intermediate</span></li>
+          </ul>
+        </div>
+
+        <div class="skill-category animate-on-scroll">
+          <h3><i class="fas fa-tools"></i> Other Skills</h3>
+          <ul class="skill-list">
+            <li>Arduino <span class="skill-level">Intermediate</span></li>
+            <li>Canva <span class="skill-level">Advanced</span></li>
+            <li>Adobe Creative Suite <span class="skill-level">Intermediate</span></li>
+            <li>NEMO Drive Test <span class="skill-level">Intermediate</span></li>
+            <li>Microsoft Office <span class="skill-level">Expert</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <div class="section-header experience-header animate-on-scroll">
+        <h2>Experience</h2>
+        <p>Progressive career journey demonstrating growth and technical expertise</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-content">
+            <h3>Intermediate Software Engineer</h3>
+            <span class="date">2024–Present</span>
+            <p>Netzon Global Technology Inc.</p>
+            <ul>
+              <li>Built AI chatbot using Semantic Kernel + PostgreSQL vector DB</li>
+              <li>Developed full-stack solutions with React, TypeScript, FastAPI, and Docker</li>
+              <li>Trained in Amazon Connect & cloud contact center design</li>
+            </ul>
           </div>
         </div>
-      </section>
 
-      <section id="experience">
-        <h2>Professional Experience</h2>
-        <ul>
-          <li>
-            <strong>Intermediate Software Engineer</strong> — Netzon Global
-            Technology Inc. (2024–Present)<br />Built AI chatbot using Semantic
-            Kernel + PostgreSQL vector DB. Developed full-stack solutions with
-            React, TypeScript, FastAPI, and Docker. Trained in Amazon Connect &
-            cloud contact center design.
-          </li>
-          <li>
-            <strong>Junior Software Engineer</strong> — Netzon Global Technology
-            Inc. (2021–2024)<br />Built Excel automation via VBA, backend with
-            FastAPI, managed PostgreSQL and Alembic, deployed via Docker.
-          </li>
-          <li>
-            <strong>Project Worker</strong> — Netzon Global Technology Inc.
-            (2021)<br />Validated product URLs, QA coordination, and trained in
-            backend/VBA foundations.
-          </li>
-          <li>
-            <strong>Virtual Assistant</strong> — Outsourced Doers (2020–2021)<br />Managed
-            social media using Canva, CRM, and email communications.
-          </li>
-          <li>
-            <strong>Drive Test Analyst</strong> — COMIT Telecom (2020)<br />Mapped
-            test routes, analyzed signals, and reported blind spots.
-          </li>
-          <li>
-            <strong>Drive Test Engineer</strong> — COMIT Telecom (2020)<br />Collected
-            mobile signal data and collaborated with analysts.
-          </li>
-          <li>
-            <strong>Biomedical Intern</strong> — Davao Doctors Hospital
-            (2019)<br />Supported equipment inspections, documentation, and tech
-            reporting.
-          </li>
-        </ul>
-      </section>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-content">
+            <h3>Junior Software Engineer</h3>
+            <span class="date">2021–2024</span>
+            <p>Netzon Global Technology Inc.</p>
+            <ul>
+              <li>Built Excel automation via VBA, backend with FastAPI</li>
+              <li>Managed PostgreSQL and Alembic, deployed via Docker</li>
+            </ul>
+          </div>
+        </div>
 
-      <section id="seminars">
-        <h2>Seminars & Certifications</h2>
-        <ul>
-          <li>Introduction to Amazon Connect – AWS – March 2025</li>
-          <li>AWS Seminar with Generative AI – Dusit Thani – June 2025</li>
-          <li>
-            Microsoft Certification, Design Thinking, AI/IoT/Cloud – Singapore –
-            2019
-          </li>
-          <li>PCB Etching, Arduino, Breadboarding – UIC – 2015–2018</li>
-          <li>Cybersecurity – Trend Micro – 2021</li>
-        </ul>
-      </section>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-content">
+            <h3>Project Worker</h3>
+            <span class="date">2021</span>
+            <p>Netzon Global Technology Inc.</p>
+            <ul>
+              <li>Validated product URLs, QA coordination</li>
+              <li>Trained in backend/VBA foundations</li>
+            </ul>
+          </div>
+        </div>
 
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>
-          Email:
-          <a href="mailto:estella.mark21@gmail.com">estella.mark21@gmail.com</a>
-        </p>
-        <p>
-          GitHub:
-          <a href="https://github.com/markestella" target="_blank"
-            >github.com/markestella</a
-          >
-        </p>
-        <p>
-          Linkedin:
-          <a href="https://linkedin.com/in/markdestella98" target="_blank"
-            >linkedin.com/in/markdestella98</a
-          >
-        </p>
-      </section>
-    </main>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-content">
+            <h3>Virtual Assistant</h3>
+            <span class="date">2020–2021</span>
+            <p>Outsourced Doers</p>
+            <ul>
+              <li>Managed social media using Canva, CRM, and email communications</li>
+            </ul>
+          </div>
+        </div>
 
-    <footer>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-content">
+            <h3>Drive Test Analyst & Engineer</h3>
+            <span class="date">2020</span>
+            <p>COMIT Telecom</p>
+            <ul>
+              <li>Mapped test routes, analyzed signals, and reported blind spots</li>
+              <li>Collected mobile signal data and collaborated with analysts</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-content">
+            <h3>Biomedical Intern</h3>
+            <span class="date">2019</span>
+            <p>Davao Doctors Hospital</p>
+            <ul>
+              <li>Supported equipment inspections, documentation, and tech reporting</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" style="background-color: #f3f4f6;">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2>Sample Templates</h2>
+        <p>Sample HTML templates demonstrating responsive design and dynamic content</p>
+      </div>
+
+      <div class="project-tabs">
+        <button class="tab-btn active" data-tab="invoice">Invoice Template</button>
+        <button class="tab-btn" data-tab="report">Report Template</button>
+        <button class="tab-btn" data-tab="letter">Letter Template</button>
+      </div>
+
+      <div id="invoice" class="tab-content active">
+        <div class="template-container">
+          <div class="template-form">
+            <h3>Invoice Generator</h3>
+            <form id="invoice-form">
+              <div class="form-group">
+                <label for="invoice-number">Invoice Number</label>
+                <input type="text" id="invoice-number" class="form-control" value="INV-2023-001">
+              </div>
+
+              <div class="form-group">
+                <label for="invoice-date">Date</label>
+                <input type="date" id="invoice-date" class="form-control" value="2023-10-15">
+              </div>
+
+              <div class="form-group">
+                <label for="due-date">Due Date</label>
+                <input type="date" id="due-date" class="form-control" value="2023-10-30">
+              </div>
+
+              <div class="form-group">
+                <label for="from-company">From (Your Company)</label>
+                <textarea id="from-company" class="form-control">Estella Solutions
+123 Business Avenue
+Makati City, Philippines
+Phone: (123) 456-7890
+Email: info@estellasolutions.com
+                </textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="to-company">To (Client)</label>
+                <textarea id="to-company" class="form-control">Global Innovations Inc.
+456 Corporate Drive
+Taguig City, Philippines
+Attn: Accounts Payable
+                </textarea>
+              </div>
+
+              <h4 style="margin: 1.5rem 0 1rem;">Items</h4>
+
+              <div class="form-group">
+                <label>Item 1</label>
+                <input type="text" placeholder="Description" class="form-control item-desc" value="Website Design">
+                <input type="number" placeholder="Quantity" class="form-control item-qty" value="1" min="1">
+                <input type="number" placeholder="Price" class="form-control item-price" value="1200" step="0.01"
+                  min="0">
+              </div>
+
+              <div class="form-group">
+                <label>Item 2</label>
+                <input type="text" placeholder="Description" class="form-control item-desc"
+                  value="Frontend Development">
+                <input type="number" placeholder="Quantity" class="form-control item-qty" value="1" min="1">
+                <input type="number" placeholder="Price" class="form-control item-price" value="1800" step="0.01"
+                  min="0">
+              </div>
+
+              <div class="form-group">
+                <label>Item 3</label>
+                <input type="text" placeholder="Description" class="form-control item-desc" value="API Integration">
+                <input type="number" placeholder="Quantity" class="form-control item-qty" value="1" min="1">
+                <input type="number" placeholder="Price" class="form-control item-price" value="950" step="0.01"
+                  min="0">
+              </div>
+
+              <div class="form-group">
+                <label for="tax-rate">Tax Rate (%)</label>
+                <input type="number" id="tax-rate" class="form-control" value="12" min="0" max="100">
+              </div>
+
+              <div class="form-group">
+                <label for="notes">Notes</label>
+                <textarea id="notes"
+                  class="form-control">Thank you for your business. Payment due within 15 days.</textarea>
+              </div>
+            </form>
+          </div>
+
+          <div class="preview-container">
+            <div class="preview-header">
+              <h3>Invoice Preview</h3>
+            </div>
+            <div class="preview-content">
+              <div id="invoice-preview" class="invoice-template template"></div>
+            </div>
+            <div class="preview-actions">
+              <button id="print-invoice" class="btn btn-primary">Print as PDF</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="report" class="tab-content">
+        <div class="template-container">
+          <div class="template-form">
+            <h3>Report Generator</h3>
+            <form id="report-form">
+              <div class="form-group">
+                <label for="report-title">Report Title</label>
+                <input type="text" id="report-title" class="form-control" value="Quarterly Performance Report">
+              </div>
+
+              <div class="form-group">
+                <label for="report-subtitle">Subtitle</label>
+                <input type="text" id="report-subtitle" class="form-control" value="Q3 2023 Analysis">
+              </div>
+
+              <div class="form-group">
+                <label for="report-author">Author</label>
+                <input type="text" id="report-author" class="form-control" value="Mark Estella">
+              </div>
+
+              <div class="form-group">
+                <label for="report-date">Date</label>
+                <input type="date" id="report-date" class="form-control" value="2023-10-15">
+              </div>
+
+              <div class="form-group">
+                <label for="report-intro">Introduction</label>
+                <textarea id="report-intro"
+                  class="form-control">This report provides an overview of the company's performance during the third quarter of 2023. Key metrics, achievements, and areas for improvement are highlighted to guide strategic planning for the upcoming quarter.</textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="report-metrics">Key Metrics</label>
+                <textarea id="report-metrics" class="form-control">Revenue Growth: +15% YoY
+Customer Acquisition: +22% from previous quarter
+Customer Retention: 92%
+Net Promoter Score: 78
+                </textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="report-conclusion">Conclusion</label>
+                <textarea id="report-conclusion"
+                  class="form-control">Q3 2023 has shown significant growth in both revenue and customer acquisition. Retention rates remain strong, indicating high customer satisfaction. The main focus for Q4 will be optimizing operational efficiency to support continued growth.</textarea>
+              </div>
+            </form>
+          </div>
+
+          <div class="preview-container">
+            <div class="preview-header">
+              <h3>Report Preview</h3>
+            </div>
+            <div class="preview-content">
+              <div id="report-preview" class="report-template template"></div>
+            </div>
+            <div class="preview-actions">
+              <button id="print-report" class="btn btn-primary">Print as PDF</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="letter" class="tab-content">
+        <div class="template-container">
+          <div class="template-form">
+            <h3>Letter Generator</h3>
+            <form id="letter-form">
+              <div class="form-group">
+                <label for="letter-date">Date</label>
+                <input type="date" id="letter-date" class="form-control" value="2023-10-15">
+              </div>
+
+              <div class="form-group">
+                <label for="sender-address">Your Address</label>
+                <textarea id="sender-address" class="form-control">Mark Estella
+123 Professional Avenue
+Makati City, Philippines 1200
+                </textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="recipient-name">Recipient Name</label>
+                <input type="text" id="recipient-name" class="form-control" value="Ms. Sarah Johnson">
+              </div>
+
+              <div class="form-group">
+                <label for="recipient-title">Recipient Title</label>
+                <input type="text" id="recipient-title" class="form-control" value="Hiring Manager">
+              </div>
+
+              <div class="form-group">
+                <label for="recipient-company">Company</label>
+                <input type="text" id="recipient-company" class="form-control" value="Tech Innovations Inc.">
+              </div>
+
+              <div class="form-group">
+                <label for="recipient-address">Company Address</label>
+                <textarea id="recipient-address" class="form-control">456 Corporate Drive
+                                                                      Taguig City, Philippines 1634
+                </textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="letter-subject">Subject</label>
+                <input type="text" id="letter-subject" class="form-control"
+                  value="Application for HTML Template Developer Position">
+              </div>
+
+              <div class="form-group">
+                <label for="letter-salutation">Salutation</label>
+                <input type="text" id="letter-salutation" class="form-control" value="Dear Ms. Johnson,">
+              </div>
+
+              <div class="form-group">
+                <label for="letter-body">Body</label>
+                <textarea id="letter-body" class="form-control">I am writing to express my interest in the HTML Template Developer position at Tech Innovations Inc., as advertised on LinkedIn. With my extensive experience in creating responsive, dynamic document templates and my background in software engineering, I am confident in my ability to contribute effectively to your team.
+
+Throughout my career, I have developed a range of professional templates including invoices, reports, and formal letters. My approach combines technical expertise with attention to design and user experience, ensuring templates are both functional and aesthetically pleasing.
+
+I am particularly impressed with Tech Innovations' commitment to quality and innovation in digital solutions. I would welcome the opportunity to discuss how my skills and experiences align with the needs of your team.
+                </textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="letter-closing">Closing</label>
+                <input type="text" id="letter-closing" class="form-control" value="Sincerely,">
+              </div>
+
+              <div class="form-group">
+                <label for="letter-sender">Your Name</label>
+                <input type="text" id="letter-sender" class="form-control" value="Mark Estella">
+              </div>
+            </form>
+          </div>
+
+          <div class="preview-container">
+            <div class="preview-header">
+              <h3>Letter Preview</h3>
+            </div>
+            <div class="preview-content">
+              <div id="letter-preview" class="letter-template template"></div>
+            </div>
+            <div class="preview-actions">
+              <button id="print-letter" class="btn btn-primary">Print as PDF</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2>Contact Me</h2>
+        <p>Get in touch for collaboration or opportunities</p>
+      </div>
+
+      <div class="contact-container">
+        <div class="contact-info animate-on-scroll">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h3>Email</h3>
+              <p><a href="mailto:mark.estella09@gmail.com">mark.estella09@gmail.com</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <div>
+              <h3>GitHub</h3>
+              <p><a href="https://markestella.github.io/portfolio/" target="_blank">markestella.github.io/portfolio</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <i class="fab fa-linkedin"></i>
+            <div>
+              <h3>LinkedIn</h3>
+              <p><a href="https://linkedin.com/in/markdestella98" target="_blank">linkedin.com/in/markdestella98</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h3>Location</h3>
+              <p>Davao City, Philippines</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form animate-on-scroll">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" class="form-control" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-content">
       <p>&copy; 2025 Mark Estella. All rights reserved.</p>
-    </footer>
-  </body>
+      <div class="social-links">
+        <a href="mailto:mark.estella09@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://markestella.github.io/portfolio/" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/markdestella98" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
