@@ -12,71 +12,71 @@ const reportPreview = document.getElementById('report-preview');
 const letterPreview = document.getElementById('letter-preview');
 
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.animate-on-scroll').forEach(el => {
-    observer.observe(el);
+  observer.observe(el);
 });
 
 navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
 
-        navLinks.forEach(l => l.classList.remove('active'));
+    navLinks.forEach(l => l.classList.remove('active'));
 
-        link.classList.add('active');
+    link.classList.add('active');
 
-        const targetId = link.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
+    const targetId = link.getAttribute('href');
+    const targetSection = document.querySelector(targetId);
 
-        window.scrollTo({
-            top: targetSection.offsetTop - 80,
-            behavior: 'smooth'
-        });
+    window.scrollTo({
+      top: targetSection.offsetTop - 80,
+      behavior: 'smooth'
     });
+  });
 });
 
 tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        tabBtns.forEach(b => b.classList.remove('active'));
-        tabContents.forEach(c => c.classList.remove('active'));
+  btn.addEventListener('click', () => {
+    tabBtns.forEach(b => b.classList.remove('active'));
+    tabContents.forEach(c => c.classList.remove('active'));
 
-        btn.classList.add('active');
+    btn.classList.add('active');
 
-        const tabId = btn.getAttribute('data-tab');
-        document.getElementById(tabId).classList.add('active');
-    });
+    const tabId = btn.getAttribute('data-tab');
+    document.getElementById(tabId).classList.add('active');
+  });
 });
 
 function generateInvoice() {
-    const invoiceNumber = document.getElementById('invoice-number').value;
-    const invoiceDate = new Date(document.getElementById('invoice-date').value).toLocaleDateString();
-    const dueDate = new Date(document.getElementById('due-date').value).toLocaleDateString();
-    const fromCompany = document.getElementById('from-company').value.split('\n').join('<br>');
-    const toCompany = document.getElementById('to-company').value.split('\n').join('<br>');
-    const taxRate = parseFloat(document.getElementById('tax-rate').value) || 0;
-    const notes = document.getElementById('notes').value;
+  const invoiceNumber = document.getElementById('invoice-number').value;
+  const invoiceDate = new Date(document.getElementById('invoice-date').value).toLocaleDateString();
+  const dueDate = new Date(document.getElementById('due-date').value).toLocaleDateString();
+  const fromCompany = document.getElementById('from-company').value.split('\n').join('<br>');
+  const toCompany = document.getElementById('to-company').value.split('\n').join('<br>');
+  const taxRate = parseFloat(document.getElementById('tax-rate').value) || 0;
+  const notes = document.getElementById('notes').value;
 
-    const itemDescs = document.querySelectorAll('.item-desc');
-    const itemQtys = document.querySelectorAll('.item-qty');
-    const itemPrices = document.querySelectorAll('.item-price');
+  const itemDescs = document.querySelectorAll('.item-desc');
+  const itemQtys = document.querySelectorAll('.item-qty');
+  const itemPrices = document.querySelectorAll('.item-price');
 
-    let itemsHTML = '';
-    let subtotal = 0;
+  let itemsHTML = '';
+  let subtotal = 0;
 
-    for (let i = 0; i < itemDescs.length; i++) {
-        const desc = itemDescs[i].value;
-        const qty = parseInt(itemQtys[i].value) || 0;
-        const price = parseFloat(itemPrices[i].value) || 0;
-        const total = qty * price;
-        subtotal += total;
+  for (let i = 0; i < itemDescs.length; i++) {
+    const desc = itemDescs[i].value;
+    const qty = parseInt(itemQtys[i].value) || 0;
+    const price = parseFloat(itemPrices[i].value) || 0;
+    const total = qty * price;
+    subtotal += total;
 
-        itemsHTML += `
+    itemsHTML += `
           <tr>
             <td>${desc}</td>
             <td>${qty}</td>
@@ -84,12 +84,12 @@ function generateInvoice() {
             <td>$${total.toFixed(2)}</td>
           </tr>
         `;
-    }
+  }
 
-    const taxAmount = subtotal * (taxRate / 100);
-    const grandTotal = subtotal + taxAmount;
+  const taxAmount = subtotal * (taxRate / 100);
+  const grandTotal = subtotal + taxAmount;
 
-    invoicePreview.innerHTML = `
+  invoicePreview.innerHTML = `
         <div class="header">
           <div>
             <h2>INVOICE</h2>
@@ -145,15 +145,15 @@ function generateInvoice() {
 }
 
 function generateReport() {
-    const title = document.getElementById('report-title').value;
-    const subtitle = document.getElementById('report-subtitle').value;
-    const author = document.getElementById('report-author').value;
-    const date = new Date(document.getElementById('report-date').value).toLocaleDateString();
-    const intro = document.getElementById('report-intro').value;
-    const metrics = document.getElementById('report-metrics').value;
-    const conclusion = document.getElementById('report-conclusion').value;
+  const title = document.getElementById('report-title').value;
+  const subtitle = document.getElementById('report-subtitle').value;
+  const author = document.getElementById('report-author').value;
+  const date = new Date(document.getElementById('report-date').value).toLocaleDateString();
+  const intro = document.getElementById('report-intro').value;
+  const metrics = document.getElementById('report-metrics').value;
+  const conclusion = document.getElementById('report-conclusion').value;
 
-    reportPreview.innerHTML = `
+  reportPreview.innerHTML = `
         <div class="report-header">
           <h1 class="report-title">${title}</h1>
           <h2 class="report-subtitle">${subtitle}</h2>
@@ -181,19 +181,19 @@ function generateReport() {
 }
 
 function generateLetter() {
-    const letterDate = new Date(document.getElementById('letter-date').value).toLocaleDateString();
-    const senderAddress = document.getElementById('sender-address').value.split('\n').join('<br>');
-    const recipientName = document.getElementById('recipient-name').value;
-    const recipientTitle = document.getElementById('recipient-title').value;
-    const recipientCompany = document.getElementById('recipient-company').value;
-    const recipientAddress = document.getElementById('recipient-address').value.split('\n').join('<br>');
-    const subject = document.getElementById('letter-subject').value;
-    const salutation = document.getElementById('letter-salutation').value;
-    const body = document.getElementById('letter-body').value;
-    const closing = document.getElementById('letter-closing').value;
-    const sender = document.getElementById('letter-sender').value;
+  const letterDate = new Date(document.getElementById('letter-date').value).toLocaleDateString();
+  const senderAddress = document.getElementById('sender-address').value.split('\n').join('<br>');
+  const recipientName = document.getElementById('recipient-name').value;
+  const recipientTitle = document.getElementById('recipient-title').value;
+  const recipientCompany = document.getElementById('recipient-company').value;
+  const recipientAddress = document.getElementById('recipient-address').value.split('\n').join('<br>');
+  const subject = document.getElementById('letter-subject').value;
+  const salutation = document.getElementById('letter-salutation').value;
+  const body = document.getElementById('letter-body').value;
+  const closing = document.getElementById('letter-closing').value;
+  const sender = document.getElementById('letter-sender').value;
 
-    letterPreview.innerHTML = `
+  letterPreview.innerHTML = `
         <div class="letter-header">
           <div class="letter-sender">
             ${senderAddress}
@@ -224,43 +224,43 @@ function generateLetter() {
 }
 
 function printToPDF(elementId, filename) {
-    const element = document.getElementById(elementId);
+  const element = document.getElementById(elementId);
 
-    html2canvas(element, {
-        scale: 2, // higher resolution for better text clarity
-        useCORS: true
-    }).then(canvas => {
-        const imgData = canvas.toDataURL('image/png');
-        const pdf = new jsPDF('p', 'mm', 'a4');
+  html2canvas(element, {
+    scale: 2, // higher resolution for better text clarity
+    useCORS: true
+  }).then(canvas => {
+    const imgData = canvas.toDataURL('image/png');
+    const pdf = new jsPDF('p', 'mm', 'a4');
 
-        const pageWidth = pdf.internal.pageSize.getWidth();   // 210 mm
-        const pageHeight = pdf.internal.pageSize.getHeight(); // 297 mm
+    const pageWidth = pdf.internal.pageSize.getWidth();   // 210 mm
+    const pageHeight = pdf.internal.pageSize.getHeight(); // 297 mm
 
-        const margin = 15; // 15 mm margin on all sides
-        const usableWidth = pageWidth - margin * 2;
-        const usableHeight = pageHeight - margin * 2;
+    const margin = 15; // 15 mm margin on all sides
+    const usableWidth = pageWidth - margin * 2;
+    const usableHeight = pageHeight - margin * 2;
 
-        // Scale so that the content fits inside the margins
-        const ratio = Math.min(usableWidth / canvas.width, usableHeight / canvas.height);
-        const imgWidth = canvas.width * ratio;
-        const imgHeight = canvas.height * ratio;
+    // Scale so that the content fits inside the margins
+    const ratio = Math.min(usableWidth / canvas.width, usableHeight / canvas.height);
+    const imgWidth = canvas.width * ratio;
+    const imgHeight = canvas.height * ratio;
 
-        // Center image within the margin box
-        const x = (pageWidth - imgWidth) / 2;
-        const y = (pageHeight - imgHeight) / 2;
+    // Center image within the margin box
+    const x = (pageWidth - imgWidth) / 2;
+    const y = (pageHeight - imgHeight) / 2;
 
-        pdf.addImage(imgData, 'PNG', x, y, imgWidth, imgHeight);
-        pdf.save(filename);
-    });
+    pdf.addImage(imgData, 'PNG', x, y, imgWidth, imgHeight);
+    pdf.save(filename);
+  });
 }
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    generateInvoice();
-    generateReport();
-    generateLetter();
+  generateInvoice();
+  generateReport();
+  generateLetter();
 
-    document.querySelector('footer p').innerHTML = `&copy; ${new Date().getFullYear()} Mark Estella. All rights reserved.`;
+  document.querySelector('footer p').innerHTML = `&copy; ${new Date().getFullYear()} Mark Estella. All rights reserved.`;
 });
 
 invoiceForm.addEventListener('input', generateInvoice);
@@ -268,21 +268,15 @@ reportForm.addEventListener('input', generateReport);
 letterForm.addEventListener('input', generateLetter);
 
 document.getElementById('print-invoice').addEventListener('click', () => {
-    printToPDF('invoice-preview', 'invoice.pdf');
+  printToPDF('invoice-preview', 'invoice.pdf');
 });
 
 document.getElementById('print-report').addEventListener('click', () => {
-    printToPDF('report-preview', 'report.pdf');
+  printToPDF('report-preview', 'report.pdf');
 });
 
 document.getElementById('print-letter').addEventListener('click', () => {
-    printToPDF('letter-preview', 'letter.pdf');
-});
-
-document.getElementById('contact-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Thank you for your message! I will get back to you soon.');
-    document.getElementById('contact-form').reset();
+  printToPDF('letter-preview', 'letter.pdf');
 });
 
 const img = document.querySelector('.about-image img');
@@ -290,22 +284,47 @@ if (img && img.complete) {
   document.querySelector('.about-image .initials').style.display = 'none';
 }
 
+const API_URL = "https://portfolio-contact-api-j0fi.onrender.com/api/contact";
+document.getElementById('contact-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const data = {
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    subject: document.getElementById('subject').value,
+    message: document.getElementById('message').value
+  };
+
+  const response = await fetch(API_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  });
+
+  if (response.ok) {
+    alert('Thanks for reaching out! I’ll get back to you soon.');
+    e.target.reset();
+  } else {
+    alert('Failed to send message. Please try again later.');
+  }
+});
+
 window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section');
-    const scrollPosition = window.scrollY + 100;
+  const sections = document.querySelectorAll('section');
+  const scrollPosition = window.scrollY + 100;
 
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        const sectionId = section.getAttribute('id');
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    const sectionId = section.getAttribute('id');
 
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${sectionId}`) {
-                    link.classList.add('active');
-                }
-            });
+    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${sectionId}`) {
+          link.classList.add('active');
         }
-    });
+      });
+    }
+  });
 });
