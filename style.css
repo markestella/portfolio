@@ -873,6 +873,7 @@ section {
   align-items: center;
   gap: 0.5rem;
   transition: var(--transition);
+  justify-content: center;
 }
 
 .filter-toggle:hover {
