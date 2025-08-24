@@ -35,7 +35,7 @@ const projects = [
     demoLink: 'https://full-stack-ai-demo.vercel.app/',
     category: 'Full Stack & AI'
   },
-    {
+  {
     id: 'recipe-finder',
     title: 'Recipe Finder App',
     date: 'Aug 2025',
